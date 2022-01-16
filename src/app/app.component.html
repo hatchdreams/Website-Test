@@ -15,7 +15,7 @@
 
 <!-- NavBar -->
 <div class="bg-bluegray-900 py-3 px-6 shadow-2 flex align-items-center justify-content-between relative lg:static">
-  <img src="assets/images/Logo.png" alt="Image" height="50">
+  <img src="assets/images/logo.png" alt="Image" height="50">
   <a pRipple class="cursor-pointer block lg:hidden text-white" pStyleClass="@next" enterClass="hidden" leaveToClass="hidden" [hideOnOutsideClick]="true">
       <i class="pi pi-bars text-4xl"></i>
   </a>
@@ -98,8 +98,9 @@
 </div>
 
 <!-- Hero -->
-<div class="bg-bluegray-900 px-4 py-8 md:px-6 lg:px-8">
-  <div class="flex flex-wrap">
+<div class="relative p-8 overflow-hidden">
+  <img src="assets/images/hero-2.png" alt="Image" class="absolute top-0 left-0 w-auto h-full block md:w-full">
+  <div class="flex flex-wrap relative">
       <div class="w-12 lg:w-6 p-8">
         <span class="block text-6xl text-white font-bold mb-1">Add Zero Trust Policy-</span>
         <div class="text-6xl text-white font-bold mb-3">Driven Security to Your</div>
@@ -108,8 +109,8 @@
         <button pButton pRipple label="Book Demo" class="p-button mr-2" (click)="bookDemoDialog = true"></button>
         <button pButton pRipple label="More Info" class="p-button-outlined p-button-secondary"></button>
       </div>
-      <div class="w-12 lg:w-6 text-center lg:text-right overflow-hidden">
-          <img src="assets/images/hero-illustration.svg" alt="Image" class="w-full lg:w-auto">
+      <div class="w-12 lg:w-6 p-8 text-center lg:text-center overflow-hidden">
+          <img src="assets/images/logo.svg" alt="Image" class="w-7">
       </div>
   </div>
 </div>
@@ -196,7 +197,7 @@
 <div class="surface-ground px-4 py-8 md:px-6 lg:px-8">
   <div class="font-bold text-6xl text-900 mb-5 text-center">Featured Articles</div>
   <div class="grid nogutter">
-      <div class="col-12 lg:col-4 p-3">
+      <div class="col-12 lg:col-3 p-4">
           <div class="shadow-2 border-round h-full surface-card">
               <img src="assets/images/blog-1.jpg" alt="Image" class="block w-full border-round-top">
               <div class="p-4">
@@ -216,7 +217,7 @@
               </div>
           </div>
       </div>
-      <div class="col-12 lg:col-4 p-3">
+      <div class="col-12 lg:col-3 p-4">
           <div class="shadow-2 border-round h-full surface-card">
               <img src="assets/images/blog-2.jpg" alt="Image" class="block w-full border-round-top">
               <div class="p-4 flex flex-column">
@@ -236,7 +237,7 @@
               </div>
           </div>
       </div>
-      <div class="col-12 lg:col-4 p-3">
+      <div class="col-12 lg:col-3 p-4">
           <div class="shadow-2 border-round h-full surface-card">
               <img src="assets/images/blog-3.jpg" alt="Image" class="block w-full border-round-top">
               <div class="p-4">
@@ -256,6 +257,26 @@
               </div>
           </div>
       </div>
+      <div class="col-12 lg:col-3 p-4">
+        <div class="shadow-2 border-round h-full surface-card">
+            <img src="assets/images/blog-2.jpg" alt="Image" class="block w-full border-round-top">
+            <div class="p-4 flex flex-column">
+                <span class="block font-medium text-blue-600 mb-3">Wildlife</span>
+                <div class="text-xl text-900 font-medium mb-3 line-height-3 ">Journey to the Ends of the Earth</div>
+                <div class="text-sm line-height-3 mb-3 text-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                <div class="flex">
+                    <p-avatar image="assets/images/avatar-f-2.png" shape="circle"></p-avatar>
+                    <div class="ml-2">
+                        <div class="text-xs font-bold text-900 mb-1">Arlene McCoy</div>
+                        <div class="text-xs flex align-items-center text-700">
+                            <i class="pi pi-calendar mr-1 text-xs"></i>
+                            <span>Apr 6, 2021</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
   </div>
 </div>
 
@@ -285,10 +306,9 @@
           <a class="text-700 block cursor-pointer line-height-3">Blog</a>
       </div>
       <div class="col-12 md:col-3">
-          <div class="text-700 line-height-3 mb-3">Join our community to get weekly updates and unique gifts every
-              friday.</div>
+          <div class="text-700 line-height-3 mb-3">Sign up for our newsletter to get weekly updates and unique offers.</div>
           <input pInputText placeholder="Enter your email" class="border-round border-400 p-3 mb-3 w-full">
-          <button pButton pRipple label="Join" class="px-5 py-3"></button>
+          <button pButton pRipple label="Join" class="px-5"></button>
       </div>
   </div>
   <div class="flex flex-wrap align-items-center justify-content-between mt-6">

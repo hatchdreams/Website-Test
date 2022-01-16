@@ -8,6 +8,7 @@ import { RippleModule } from 'primeng/ripple';
 import { ButtonModule } from 'primeng/button';
 import { AvatarModule } from 'primeng/avatar';
 import { DialogModule } from 'primeng/dialog';
+import { InputMaskModule } from 'primeng/inputmask';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DialogModule } from 'primeng/dialog';
     RippleModule,
     ButtonModule,
     AvatarModule,
-    DialogModule
+    DialogModule,
+    InputMaskModule
   ],
   providers: [],
   bootstrap: [AppComponent]
