@@ -29,50 +29,68 @@
                 <ul class="list-none p-0 m-0 border-round shadow-0 lg:shadow-2 lg:absolute surface-overlay hidden origin-top w-full lg:w-15rem text-900">
                     <li>
                         <a pRipple class="flex p-3 align-items-center hover:surface-50 transition-colors transition-duration-150">
-                            <i class="pi pi-list text-2xl mr-2 text-blue-600"></i>
-                            <span>Features</span>
+                            <i class="pi pi-lock text-2xl mr-2 text-blue-600"></i>
+                            <span>Default Deny</span>
                         </a>
                     </li>
                     <li>
                         <a pRipple class="flex p-3 align-items-center hover:surface-50 transition-colors transition-duration-150">
                             <i class="pi pi-shield text-2xl mr-2 text-blue-600"></i>
-                            <span>Solutions</span>
+                            <span>Ringfencing®</span>
                         </a>
                     </li>
                     <li>
                         <a pRipple class="flex p-3 align-items-center hover:surface-50 transition-colors transition-duration-150">
-                            <i class="pi pi-users text-2xl mr-2 text-blue-600"></i>
-                            <span>Customers</span>
+                            <i class="pi pi-save text-2xl mr-2 text-blue-600"></i>
+                            <span>Storage Control</span>
                         </a>
                     </li>
-                    <li class="relative">
-                        <a pRipple class="flex p-3 align-items-center hover:surface-50 transition-colors transition-duration-150"
-                            pStyleClass="@next" enterClass="hidden" enterActiveClass="scalein" leaveToClass="hidden" leaveActiveClass="fadeout" [hideOnOutsideClick]="true">
-                            <i class="pi pi-question-circle text-2xl mr-2 text-blue-600"></i>
-                            <span>Support</span>
-                            <i class="pi pi-chevron-down ml-auto lg:-rotate-90"></i>
+                    <li>
+                        <a pRipple class="flex p-3 align-items-center hover:surface-50 transition-colors transition-duration-150">
+                            <i class="pi pi-arrow-up text-2xl mr-2 text-blue-600"></i>
+                            <span>Elevation</span>
                         </a>
-                        <ul class="list-none py-3 pl-3 pr-0 m-0 lg:px-0 lg:py-0 border-round shadow-0 lg:shadow-2 lg:absolute surface-overlay hidden origin-top w-full lg:w-15rem cursor-pointer left-100 top-0">
-                            <li>
-                                <a pRipple class="flex p-3 align-items-center hover:surface-50 transition-colors transition-duration-150">
-                                    <i class="pi pi-cloud mr-2"></i>
-                                    <span class="font-medium">Help Center</span>
-                                </a>
-                            </li>
-                            <li class="relative">
-                                <a pRipple class="flex p-3 align-items-center hover:surface-50 transition-colors transition-duration-150">
-                                    <i class="pi pi-question-circle mr-2"></i>
-                                    <span class="font-medium">Faq</span>
-                                </a>
-                            </li>
-                        </ul>
+                    </li>
+                    <li>
+                        <a pRipple class="flex p-3 align-items-center hover:surface-50 transition-colors transition-duration-150">
+                            <i class="pi pi-question text-2xl mr-2 text-blue-600"></i>
+                            <span>Help Center</span>
+                        </a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a pRipple class="flex px-0 lg:px-5 py-3 hover:text-indigo-100 font-medium transition-colors transition-duration-150">
+                <a pRipple class="flex px-0 lg:px-5 py-3 align-items-center hover:text-indigo-100 font-medium transition-colors transition-duration-150" 
+                    pStyleClass="@next" enterClass="hidden" enterActiveClass="scalein" leaveToClass="hidden" leaveActiveClass="fadeout" [hideOnOutsideClick]="true">
                     <span>Why ThreatLocker</span>
+                    <i class="pi pi-chevron-down ml-auto lg:ml-3"></i>
                 </a>
+                <ul class="list-none p-0 m-0 border-round shadow-0 lg:shadow-2 lg:absolute surface-overlay hidden origin-top w-full lg:w-15rem text-900">
+                    <li>
+                        <a pRipple class="flex p-3 align-items-center hover:surface-50 transition-colors transition-duration-150">
+                            <i class="pi pi-cloud text-2xl mr-2 text-blue-600"></i>
+                            <span>Remote Access Attacks</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a pRipple class="flex p-3 align-items-center hover:surface-50 transition-colors transition-duration-150">
+                            <i class="pi pi-cloud-download text-2xl mr-2 text-blue-600"></i>
+                            <span>Malware</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a pRipple class="flex p-3 align-items-center hover:surface-50 transition-colors transition-duration-150">
+                            <i class="pi pi-database text-2xl mr-2 text-blue-600"></i>
+                            <span>Data Theft</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a pRipple class="flex p-3 align-items-center hover:surface-50 transition-colors transition-duration-150">
+                            <i class="pi pi-comments text-2xl mr-2 text-blue-600"></i>
+                            <span>Internal IT Disputes</span>
+                        </a>
+                    </li>
+                </ul>
             </li>
             <li>
                 <a pRipple class="flex px-0 lg:px-5 py-3 hover:text-indigo-100 font-medium transition-colors transition-duration-150">
