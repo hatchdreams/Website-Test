@@ -1,0 +1,223 @@
+<!-- Dialog -->
+<p-dialog [(visible)]="bookDemoDialog" [modal]="true"  header="Book ThreatLocker Demo" [draggable]="false" [resizable]="false">
+    <div class="p-fluid">
+        <div class="p-field mb-2">
+            <label for="firstname1">First Name*</label>
+            <input id="firstname1" type="text" pInputText> 
+        </div>
+        <div class="p-field mb-2">
+            <label for="email">Email*</label>
+            <input id="email" type="text" pInputText> 
+        </div>
+        <div class="p-field mb-2">
+            <label for="phone">Phone*</label>
+            <input id="phone" type="text" pInputText> 
+        </div>
+        <div class="p-field mb-2">
+            <label >Are you a managed services provider?*</label>
+            <div class="p-field-radiobutton">
+                <p-radioButton name="city5" value="true" [(ngModel)]="isManagedServicesProvider" inputId="city5"></p-radioButton>
+                <label for="city5">Yes</label>
+            </div>
+            <div class="p-field-radiobutton">
+                <p-radioButton name="city6" value="false" [(ngModel)]="isManagedServicesProvider" inputId="city6"></p-radioButton>
+                <label for="city6">No</label>
+            </div>
+        </div>
+        <div class="p-field mb-2">
+            <label for="integeronly">Number of Users/Endpoints*</label>
+            <p-inputNumber inputId="integeronly" [(ngModel)]="numOfEndpoints">
+            </p-inputNumber>
+        </div>
+    </div>
+    <ng-template pTemplate="footer">
+        <div class="border-top-1 surface-border pt-3">
+            <button pButton pRipple icon="pi pi-times" (click)="bookDemoDialog = false" label="Cancel" class="p-button-text"></button>
+            <button pButton pRipple icon="pi pi-check" (click)="bookDemoDialog = false" label="Submit"></button>
+        </div>
+    </ng-template>
+</p-dialog>
+
+<!-- Hero -->
+<div class="relative p-8 overflow-hidden">
+  <img src="assets/images/hero-2.png" alt="Image" class="absolute top-0 left-0 w-auto h-full block md:w-full">
+  <div class="flex flex-wrap relative">
+      <div class="w-12 lg:w-6 p-8">
+        <span class="block text-6xl text-white font-bold mb-1">Add Zero Trust Policy-</span>
+        <div class="text-6xl text-white font-bold mb-3">Driven Security to Your</div>
+        <div class="text-6xl text-white font-bold mb-3">Endpoints</div>
+        <p class="text-xl text-white mt-0 mb-5">Application Whitelisting, Ringfencing, and Data Storage Control from ThreatLocker protects your business from malicious and misused software.</p>
+        <button pButton pRipple label="Book Demo" class="p-button mr-2" (click)="bookDemoDialog = true"></button>
+        <button pButton pRipple label="More Info" class="p-button-outlined p-button-secondary"></button>
+      </div>
+      <div class="w-12 lg:w-6 p-8 text-center lg:text-center overflow-hidden">
+          <img src="assets/images/logo.svg" alt="Image" class="w-7">
+      </div>
+  </div>
+</div>
+
+<!-- Featured Section -->
+<div class="surface-section px-4 py-8 md:px-6 lg:px-8 text-center">
+  <div class="mb-3 p-4 text-5xl">
+      <span class="text-blue-600">The Cybersecurity</span><br>
+      <span class="text-blue-600">Paradigm Is Shifting</span>
+      <div class="text-700 text-xl mb-6 p-2">Find out why you should choose ThreatLocker.</div>
+  </div>
+  <div class="mb-3 p-4">
+    <div class="grid">
+      <div class="col-12 md:col-2 mb-4 px-5">
+    </div>
+    <div class="col-12 md:col-2 mb-4 px-5">
+      <span class="p-3 shadow-2 mb-3 inline-block surface-card" style="border-radius: 10px">
+          <i class="pi pi-ban text-4xl text-blue-500"></i>
+      </span>
+      <div class="text-900 mb-2 font-medium">App Whitelisting</div>
+      <span class="text-700 text-sm line-height-3">No more unknown applications sneaking past your anti-virus. Set policies to automatically block untrusted software from running, whether executed by a user or an exploit at the kernel.</span>
+    </div>
+    <div class="col-12 md:col-2 mb-4 px-5">
+        <span class="p-3 shadow-2 mb-3 inline-block surface-card" style="border-radius: 10px">
+            <i class="pi pi-lock text-4xl text-blue-500"></i>
+        </span>
+        <div class="text-900 mb-3 font-medium">Ringfencing®</div>
+        <span class="text-700 text-sm line-height-3">Control how applications can interact with each other, and protect network resources, registry and your data from misbehaving software.</span>
+    </div>
+    <div class="col-12 md:col-2 mb-4 px-5">
+        <span class="p-3 shadow-2 mb-3 inline-block surface-card" style="border-radius: 10px">
+            <i class="pi pi-save text-4xl text-blue-500"></i>
+        </span>
+        <div class="text-900 mb-3 font-medium">Storage Control</div>
+        <span class="text-700 text-sm line-height-3">Determine what kind of files can be save to, copied from, or deleted off your systems. Set individual policies for file types like text and video, as well as unique policies for storage devices like hard drives or servers.</span>
+    </div>
+    <div class="col-12 md:col-2 mb-4 px-5">
+        <span class="p-3 shadow-2 mb-3 inline-block surface-card" style="border-radius: 10px">
+            <i class="pi pi-search-minus text-4xl text-blue-500"></i>
+        </span>
+        <div class="text-900 mb-3 font-medium">Realtime File Audit</div>
+        <span class="text-700 text-sm line-height-3">Audit all file and application access in real-time. See information for remote and local users in an easy-to-search unified audit.</span>
+    </div>
+    <div class="col-12 md:col-2 mb-4 px-5">
+    </div>
+  </div>
+  </div>
+</div>
+
+<!-- Testimonials -->
+<div class="bg-bluegray-900 grid grid-nogutter surface-section text-800">
+  <div class="col-12 md:col-6 p-8 text-center md:text-left flex align-items-center ">
+      <section class="p-8">
+          <div class="text-6xl text-white font-bold">"</div>
+          <p class="mt-0 mb-4 text-white text-3xl line-height-3">ThreatLocker provides an easy-to-deploy solution that handles many of the commonly annoying and cumbersome tasks around application control, storage control, and logging. It does all of this while keeping the user in mind.</p>
+          <div class="text-900 text-white mb-3 font-medium">Brad Proctor, IT Manager<br>QRI</div>
+          <button pButton pRipple label="More Testimonials" type="button" class="p-button-outlined p-button-secondary"></button>
+      </section>
+  </div>
+  <div class="col-12 md:col-6 overflow-hidden">
+      <img src="assets/images/hero-1.png" alt="Image" class="md:ml-auto block md:h-full" style="clip-path: polygon(8% 0, 100% 0%, 100% 100%, 0 100%)">
+  </div>
+</div>
+
+<!-- Hero 2 -->
+<div class="surface-section px-4 py-8 md:px-6 lg:px-8"> 
+  <div class="flex flex-wrap">
+    <div class="w-12 lg:w-6 p-8">
+      <span class="block text-6xl font-bold mb-1">Zero Trust. Complete</span>
+      <div class="text-6xl font-bold mb-3">Peace of Mind</div>
+      <p class="text-xl mt-0 mb-5">Allow only known and tested applications to run on your systems. No more unknown applications sneaking past your anti-virus. Set policies to automatically block untrusted software from running, whether executed by a user or an exploit at the kernel.</p>
+      <button pButton pRipple label="Book Demo" class="p-button mr-2" (click)="bookDemoDialog = true"></button>
+      <button pButton pRipple label="More Info" class="p-button-outlined p-button-secondary"></button>
+    </div>
+    <div class="w-full xl:w-6 p-3 flex align-items-center justify-content-center bg-indigo-50 p-4 lg:p-8 mt-5 xl:mt-0" style="border-radius: 30px">
+        <div class="relative w-full" style="padding-bottom:56.25%;height:0;">
+            <iframe class="absolute top-0 left-0 w-full h-full" width="560" height="315" src="https://www.youtube.com/embed/XNRevmRLb70" title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- Blog -->
+<div class="surface-ground px-4 py-8 md:px-6 lg:px-8">
+  <div class="font-bold text-6xl text-900 mb-5 text-center">Featured Articles</div>
+  <div class="grid nogutter p-8">
+      <div class="col-12 lg:col-3 p-4">
+          <div class="shadow-2 border-round h-full surface-card">
+              <img src="assets/images/blog-1.jpg" alt="Image" class="block w-full border-round-top h-15rem">
+              <div class="p-4">
+                  <span class="block font-medium text-blue-600 mb-3">Robotics</span>
+                  <div class="text-xl text-900 font-medium mb-3 line-height-3 ">Fugitive flamingo spotted in Florida</div>
+                  <div class="text-sm line-height-3 mb-3 text-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  <div class="flex">
+                      <p-avatar image="assets/images/avatar-f-1.png" shape="circle"></p-avatar>
+                      <div class="ml-2">
+                          <div class="text-xs font-bold text-900 mb-1">Anna Lane</div>
+                          <div class="text-xs flex align-items-center text-700">
+                              <i class="pi pi-calendar mr-1 text-xs"></i>
+                              <span>Apr 5, 2021</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-12 lg:col-3 p-4">
+          <div class="shadow-2 border-round h-full surface-card">
+              <img src="assets/images/blog-2.jpg" alt="Image" class="block w-full border-round-top h-15rem">
+              <div class="p-4 flex flex-column">
+                  <span class="block font-medium text-blue-600 mb-3">Chips</span>
+                  <div class="text-xl text-900 font-medium mb-3 line-height-3 ">Journey to the Ends of the Earth</div>
+                  <div class="text-sm line-height-3 mb-3 text-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  <div class="flex">
+                      <p-avatar image="assets/images/avatar-f-2.png" shape="circle"></p-avatar>
+                      <div class="ml-2">
+                          <div class="text-xs font-bold text-900 mb-1">Arlene McCoy</div>
+                          <div class="text-xs flex align-items-center text-700">
+                              <i class="pi pi-calendar mr-1 text-xs"></i>
+                              <span>Apr 6, 2021</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-12 lg:col-3 p-4">
+          <div class="shadow-2 border-round h-full surface-card">
+              <img src="assets/images/blog-3.jpg" alt="Image" class="block w-full border-round-top h-15rem">
+              <div class="p-4">
+                  <span class="block font-medium text-blue-600 mb-3">Electricity</span>
+                  <div class="text-xl text-900 font-medium mb-3 line-height-3 ">'Real and imminent' extinction risk</div>
+                  <div class="text-sm line-height-3 mb-3 text-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  <div class="flex">
+                      <p-avatar image="assets/images/avatar-f-3.png" shape="circle"></p-avatar>
+                      <div class="ml-2">
+                          <div class="text-xs font-bold text-900 mb-1">Diane Miles</div>
+                          <div class="text-xs flex align-items-center text-700">
+                              <i class="pi pi-calendar mr-1 text-xs"></i>
+                              <span>Apr 9, 2021</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-12 lg:col-3 p-4">
+        <div class="shadow-2 border-round h-full surface-card">
+            <img src="assets/images/blog-4.jpg" alt="Image" class="block w-full border-round-top h-15rem">
+            <div class="p-4 flex flex-column">
+                <span class="block font-medium text-blue-600 mb-3">Servers</span>
+                <div class="text-xl text-900 font-medium mb-3 line-height-3 ">Attacks on Your Stacks</div>
+                <div class="text-sm line-height-3 mb-3 text-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                <div class="flex">
+                    <p-avatar image="assets/images/avatar-f-2.png" shape="circle"></p-avatar>
+                    <div class="ml-2">
+                        <div class="text-xs font-bold text-900 mb-1">Arlene McCoy</div>
+                        <div class="text-xs flex align-items-center text-700">
+                            <i class="pi pi-calendar mr-1 text-xs"></i>
+                            <span>Apr 6, 2021</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
