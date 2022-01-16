@@ -7,6 +7,7 @@ import { StyleClassModule } from 'primeng/styleclass';
 import { RippleModule } from 'primeng/ripple';
 import { ButtonModule } from 'primeng/button';
 import { AvatarModule } from 'primeng/avatar';
+import { DialogModule } from 'primeng/dialog';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AvatarModule } from 'primeng/avatar';
     RippleModule,
     ButtonModule,
     AvatarModule,
+    DialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

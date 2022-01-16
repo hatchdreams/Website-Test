@@ -1,30 +1,30 @@
 
 <!-- Banner -->
-<div class="bg-bluegray-900 text-gray-100 p-3 flex justify-content-between lg:justify-content-center align-items-center flex-wrap">
+<div class="bg-gray-900 text-gray-100 p-3 flex justify-content-between lg:justify-content-center align-items-center flex-wrap">
   <div class="font-bold mr-8">Zero Trust World '22</div>
   <div class="align-items-center hidden lg:flex">
       <span class="line-height-3">Gain hands-on hacking experience and level up your cybersecurity stack.</span>
   </div>
-  <a class="flex align-items-center ml-2 mr-8">
-      <span class="underline font-bold">Learn More</span>
+  <a href="http://zerotrustworld.threatlocker.com/" class="flex align-items-center ml-2 mr-8">
+      <span class="underline font-bold text-white">Learn More</span>
   </a>
-  <a class="flex align-items-center no-underline justify-content-center border-circle text-gray-100 hover:bg-bluegray-700 cursor-pointer transition-colors transition-duration-150" style="width:2rem; height: 2rem">
+  <a class="flex align-items-center no-underline justify-content-center border-circle text-gray-100 hover:bg-bluegray-700 cursor-pointer transition-colors transition-duration-150" style="width:2rem; height: 2rem" (click)="!bannerVisible">
       <i class="pi pi-times"></i>
   </a>
 </div>
 
 <!-- NavBar -->
-<div class="bg-gray-900 py-3 px-6 shadow-2 flex align-items-center justify-content-between relative lg:static">
+<div class="bg-bluegray-900 py-3 px-6 shadow-2 flex align-items-center justify-content-between relative lg:static">
   <img src="assets/images/Logo.png" alt="Image" height="50">
   <a pRipple class="cursor-pointer block lg:hidden text-white" pStyleClass="@next" enterClass="hidden" leaveToClass="hidden" [hideOnOutsideClick]="true">
       <i class="pi pi-bars text-4xl"></i>
   </a>
-  <div class="align-items-center flex-grow-1 lg:justify-content-end hidden lg:flex absolute lg:static w-full bg-gray-900 left-0 top-100 px-6 lg:px-0 z-3 shadow-2 lg:shadow-none">
+  <div class="align-items-center flex-grow-1 lg:justify-content-end hidden lg:flex absolute lg:static w-full bg-bluegray-900 left-0 top-100 px-6 lg:px-0 z-3 shadow-2 lg:shadow-none">
       <ul class="list-none p-0 m-0 flex lg:align-items-center text-white select-none flex-column lg:flex-row cursor-pointer">
           <li class="relative">
               <a pRipple class="flex px-0 lg:px-5 py-3 align-items-center hover:text-indigo-100 font-medium transition-colors transition-duration-150" 
                   pStyleClass="@next" enterClass="hidden" enterActiveClass="scalein" leaveToClass="hidden" leaveActiveClass="fadeout" [hideOnOutsideClick]="true">
-                  <span>Products</span>
+                  <span>Platform</span>
                   <i class="pi pi-chevron-down ml-auto lg:ml-3"></i>
               </a>
               <ul class="list-none p-0 m-0 border-round shadow-0 lg:shadow-2 lg:absolute surface-overlay hidden origin-top w-full lg:w-15rem text-900">
@@ -72,7 +72,12 @@
           </li>
           <li>
               <a pRipple class="flex px-0 lg:px-5 py-3 hover:text-indigo-100 font-medium transition-colors transition-duration-150">
-                  <span>Corporate</span>
+                  <span>Why ThreatLocker</span>
+              </a>
+          </li>
+          <li>
+              <a pRipple class="flex px-0 lg:px-5 py-3 hover:text-indigo-100 font-medium transition-colors transition-duration-150">
+                  <span>Partners</span>
               </a>
           </li>
           <li>
@@ -81,25 +86,27 @@
               </a>
           </li>
           <li>
-              <a pRipple class="flex px-0 lg:px-5 py-3 hover:text-indigo-100 font-medium transition-colors transition-duration-150">
-                  <span>Pricing</span>
-              </a>
-          </li>
+            <a pRipple class="flex px-0 lg:px-5 py-3 hover:text-indigo-100 font-medium transition-colors transition-duration-150">
+                <span>Company</span>
+            </a>
+        </li>
       </ul>
       <div class="flex justify-content-between lg:block border-top-1 lg:border-top-none surface-border py-3 lg:py-0 mt-3 lg:mt-0 lg:ml-5">
-          <button pButton pRipple label="Book Demo" class="p-button"></button>
+          <button pButton pRipple label="Book Demo" class="p-button" (click)="bookDemoDialog = true"></button>
       </div>
   </div>
 </div>
 
 <!-- Hero -->
-<div class="bg-gray-900 px-4 py-8 md:px-6 lg:px-8">
+<div class="bg-bluegray-900 px-4 py-8 md:px-6 lg:px-8">
   <div class="flex flex-wrap">
-      <div class="w-12 lg:w-6 p-4">
-          <h1 class="text-6xl font-bold text-white mt-0 mb-3">Add Zero Trust Policy Driven Security to Your Endpoints</h1>
-          <p class="text-3xl text-gray-400 mt-0 mb-5">Application Whitelisting, Ringfencing, and Data Storage Control from ThreatLocker protects your business from malicious and misused software.</p>
-          <button pButton pRipple label="Book Demo" class="p-button mr-2"></button>
-          <button pButton pRipple label="More Info" class="p-button-outlined p-button-secondary"></button>
+      <div class="w-12 lg:w-6 p-8">
+        <span class="block text-6xl text-white font-bold mb-1">Add Zero Trust Policy-</span>
+        <div class="text-6xl text-white font-bold mb-3">Driven Security to Your</div>
+        <div class="text-6xl text-white font-bold mb-3">Endpoints</div>
+        <p class="text-xl text-white mt-0 mb-5">Application Whitelisting, Ringfencing, and Data Storage Control from ThreatLocker protects your business from malicious and misused software.</p>
+        <button pButton pRipple label="Book Demo" class="p-button mr-2" (click)="bookDemoDialog = true"></button>
+        <button pButton pRipple label="More Info" class="p-button-outlined p-button-secondary"></button>
       </div>
       <div class="w-12 lg:w-6 text-center lg:text-right overflow-hidden">
           <img src="assets/images/hero-illustration.svg" alt="Image" class="w-full lg:w-auto">
@@ -109,67 +116,56 @@
 
 <!-- Featured Section -->
 <div class="surface-section px-4 py-8 md:px-6 lg:px-8 text-center">
-  <div class="mb-3 font-bold text-2xl">
-      <span class="text-900">One Product, </span>
-      <span class="text-blue-600">Many Solutions</span>
+  <div class="mb-3 p-4 text-5xl">
+      <span class="text-blue-600">The Cybersecurity</span><br>
+      <span class="text-blue-600">Paradigm Is Shifting</span>
+      <div class="text-700 text-xl mb-6 p-2">Find out why you should choose ThreatLocker.</div>
   </div>
-  <div class="text-700 text-sm mb-6">Ac turpis egestas maecenas pharetra convallis posuere morbi leo urna.</div>
-  <div class="grid">
-      <div class="col-12 md:col-4 mb-4 px-5">
-          <span class="p-3 shadow-2 mb-3 inline-block surface-card" style="border-radius: 10px">
-              <i class="pi pi-desktop text-4xl text-blue-500"></i>
-          </span>
-          <div class="text-900 mb-3 font-medium">Built for Developers</div>
-          <span class="text-700 text-sm line-height-3">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
-      </div>
-      <div class="col-12 md:col-4 mb-4 px-5">
-          <span class="p-3 shadow-2 mb-3 inline-block surface-card" style="border-radius: 10px">
-              <i class="pi pi-lock text-4xl text-blue-500"></i>
-          </span>
-          <div class="text-900 mb-3 font-medium">End-to-End Encryption</div>
-          <span class="text-700 text-sm line-height-3">Risus nec feugiat in fermentum posuere urna nec. Posuere sollicitudin aliquam ultrices sagittis.</span>
-      </div>
-      <div class="col-12 md:col-4 mb-4 px-5">
-          <span class="p-3 shadow-2 mb-3 inline-block surface-card" style="border-radius: 10px">
-              <i class="pi pi-check-circle text-4xl text-blue-500"></i>
-          </span>
-          <div class="text-900 mb-3 font-medium">Easy to Use</div>
-          <span class="text-700 text-sm line-height-3">Ornare suspendisse sed nisi lacus sed viverra tellus. Neque volutpat ac tincidunt vitae semper.</span>
-      </div>
-      <div class="col-12 md:col-4 mb-4 px-5">
-          <span class="p-3 shadow-2 mb-3 inline-block surface-card" style="border-radius: 10px">
-              <i class="pi pi-globe text-4xl text-blue-500"></i>
-          </span>
-          <div class="text-900 mb-3 font-medium">Fast & Global Support</div>
-          <span class="text-700 text-sm line-height-3">Fermentum et sollicitudin ac orci phasellus egestas tellus rutrum tellus.</span>
-      </div>
-      <div class="col-12 md:col-4 mb-4 px-5">
-          <span class="p-3 shadow-2 mb-3 inline-block surface-card" style="border-radius: 10px">
-              <i class="pi pi-github text-4xl text-blue-500"></i>
-          </span>
-          <div class="text-900 mb-3 font-medium">Open Source</div>
-          <span class="text-700 text-sm line-height-3">Nec tincidunt praesent semper feugiat. Sed adipiscing diam donec adipiscing tristique risus nec feugiat. </span>
-      </div>
-      <div class="col-12 md:col-4 md:mb-4 mb-0 px-3">
-          <span class="p-3 shadow-2 mb-3 inline-block surface-card" style="border-radius: 10px">
-              <i class="pi pi-shield text-4xl text-blue-500"></i>
-          </span>
-          <div class="text-900 mb-3 font-medium">Trusted Securitty</div>
-          <span class="text-700 text-sm line-height-3">Mattis rhoncus urna neque viverra justo nec ultrices. Id cursus metus aliquam eleifend.</span>
-      </div>
+  <div class="mb-3 p-4">
+    <div class="grid">
+      <div class="col-12 md:col-2 mb-4 px-5">
+    </div>
+    <div class="col-12 md:col-2 mb-4 px-5">
+      <span class="p-3 shadow-2 mb-3 inline-block surface-card" style="border-radius: 10px">
+          <i class="pi pi-ban text-4xl text-blue-500"></i>
+      </span>
+      <div class="text-900 mb-2 font-medium">App Whitelisting</div>
+      <span class="text-700 text-sm line-height-3">No more unknown applications sneaking past your anti-virus. Set policies to automatically block untrusted software from running, whether executed by a user or an exploit at the kernel.</span>
+    </div>
+    <div class="col-12 md:col-2 mb-4 px-5">
+        <span class="p-3 shadow-2 mb-3 inline-block surface-card" style="border-radius: 10px">
+            <i class="pi pi-lock text-4xl text-blue-500"></i>
+        </span>
+        <div class="text-900 mb-3 font-medium">Ringfencing®</div>
+        <span class="text-700 text-sm line-height-3">Control how applications can interact with each other, and protect network resources, registry and your data from misbehaving software.</span>
+    </div>
+    <div class="col-12 md:col-2 mb-4 px-5">
+        <span class="p-3 shadow-2 mb-3 inline-block surface-card" style="border-radius: 10px">
+            <i class="pi pi-save text-4xl text-blue-500"></i>
+        </span>
+        <div class="text-900 mb-3 font-medium">Storage Control</div>
+        <span class="text-700 text-sm line-height-3">Determine what kind of files can be save to, copied from, or deleted off your systems. Set individual policies for file types like text and video, as well as unique policies for storage devices like hard drives or servers.</span>
+    </div>
+    <div class="col-12 md:col-2 mb-4 px-5">
+        <span class="p-3 shadow-2 mb-3 inline-block surface-card" style="border-radius: 10px">
+            <i class="pi pi-search-minus text-4xl text-blue-500"></i>
+        </span>
+        <div class="text-900 mb-3 font-medium">Realtime File Audit</div>
+        <span class="text-700 text-sm line-height-3">Audit all file and application access in real-time. See information for remote and local users in an easy-to-search unified audit.</span>
+    </div>
+    <div class="col-12 md:col-2 mb-4 px-5">
+    </div>
+  </div>
   </div>
 </div>
 
 <!-- Testimonials -->
-<div class="grid grid-nogutter surface-section text-800">
-  <div class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
-      <section>
-          <span class="block text-6xl font-bold mb-1">Create the screens your</span>
-          <div class="text-6xl text-primary font-bold mb-3">your visitors deserve to see</div>
-          <p class="mt-0 mb-4 text-700 line-height-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          
-          <button pButton pRipple label="Learn More" type="button" class="mr-3 p-button-raised"></button>
-          <button pButton pRipple label="Live Demo" type="button" class="p-button-outlined"></button>
+<div class="bg-bluegray-900 grid grid-nogutter surface-section text-800">
+  <div class="col-12 md:col-6 p-8 text-center md:text-left flex align-items-center ">
+      <section class="p-8">
+          <div class="text-6xl text-white font-bold">"</div>
+          <p class="mt-0 mb-4 text-white text-3xl line-height-3">ThreatLocker provides an easy-to-deploy solution that handles many of the commonly annoying and cumbersome tasks around application control, storage control, and logging. It does all of this while keeping the user in mind.</p>
+          <button pButton pRipple label="More Testimonials" type="button" class="p-button-outlined p-button-secondary"></button>
       </section>
   </div>
   <div class="col-12 md:col-6 overflow-hidden">
@@ -178,23 +174,21 @@
 </div>
 
 <!-- Hero 2 -->
-<div class="surface-section px-4 py-8 md:px-6 lg:px-8">
+<div class="surface-section px-4 py-8 md:px-6 lg:px-8"> 
   <div class="flex flex-wrap">
-      <div class="w-full xl:w-6 p-3 pr-5">
-          <span class="text-indigo-600 font-bold mb-4 block">SUPERCHARGE YOUR PRODUCT</span>
-          <div class="font-bold text-900 text-6xl mb-4">Take Control of Your Marketing Strategy</div>
-          <p class="mt-0 mb-5 text-700 line-height-3 text-xl">Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. In ante metus dictum at tempor commodo ullamcorper a lacus.</p>
-          <div class="relative w-full xl:w-30rem">
-              <input pInputText type="text" placeholder="Enter your email" class="py-3 pl-3 w-full" style="border-radius: 30px;padding-right: 8rem">
-              <button class="p-3 absolute appearance-none p-component border-none bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 text-white outline-none h-full cursor-pointer" style="border-radius: 30px; top: 0; right: 0">Join Now</button>
-          </div>
-      </div>
-      <div class="w-full xl:w-6 p-3 flex align-items-center justify-content-center bg-indigo-50 p-4 lg:p-8 mt-5 xl:mt-0" style="border-radius: 30px">
-          <div class="relative w-full" style="padding-bottom:56.25%;height:0;">
-              <iframe class="absolute top-0 left-0 w-full h-full" width="560" height="315" src="https://www.youtube.com/embed/XNRevmRLb70" title="YouTube video player" frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-      </div>
+    <div class="w-12 lg:w-6 p-8">
+      <span class="block text-6xl font-bold mb-1">Zero Trust. Complete</span>
+      <div class="text-6xl font-bold mb-3">Peace of Mind</div>
+      <p class="text-xl mt-0 mb-5">Allow only known and tested applications to run on your systems. No more unknown applications sneaking past your anti-virus. Set policies to automatically block untrusted software from running, whether executed by a user or an exploit at the kernel.</p>
+      <button pButton pRipple label="Book Demo" class="p-button mr-2" (click)="bookDemoDialog = true"></button>
+      <button pButton pRipple label="More Info" class="p-button-outlined p-button-secondary"></button>
+    </div>
+    <div class="w-full xl:w-6 p-3 flex align-items-center justify-content-center bg-indigo-50 p-4 lg:p-8 mt-5 xl:mt-0" style="border-radius: 30px">
+        <div class="relative w-full" style="padding-bottom:56.25%;height:0;">
+            <iframe class="absolute top-0 left-0 w-full h-full" width="560" height="315" src="https://www.youtube.com/embed/XNRevmRLb70" title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
   </div>
 </div>
 
@@ -299,7 +293,7 @@
   </div>
   <div class="flex flex-wrap align-items-center justify-content-between mt-6">
       <div class="flex align-items-center justify-content-start md:mb-0 mb-3">
-          <img src="assets/images/blocks/logos/alfred-700.svg" alt="Image">
+          <img src="assets/images/logo-dark.png" alt="Image" class="w-12rem">
       </div>
       <div class="flex align-items-center justify-content-between md:mb-0 mb-3">
           <a class="text-700 cursor-pointer md:ml-5 ml-2">Brand Policy</a>
@@ -319,3 +313,23 @@
       </div>
   </div>
 </div>
+
+
+<!-- Dialog -->
+<p-dialog [(visible)]="bookDemoDialog" appendTo="body" [modal]="true" [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '40vw'}" header="Title Placeholder"
+    [draggable]="false" [resizable]="false">
+    <div class="flex flex-wrap border-top-1 surface-border pt-4">
+        <div class="bg-blue-50 flex align-items-center justify-content-center py-3 px-0 w-full md:w-4 border-round">
+            <img src="assets/images/blocks/illustration/security.svg" alt="Image" class="w-9">
+        </div>
+        <p class="text-700 line-height-3 m-0 p-5 w-full md:w-8">
+            Sagittis eu volutpat odio facilisis mauris sit amet. Sed velit dignissim sodales ut eu sem integer. Sed risus pretium quam vulputate. At tellus at urna condimentum mattis pellentesque.
+        </p>
+    </div>
+    <ng-template pTemplate="footer">
+        <div class="border-top-1 surface-border pt-3">
+            <button pButton pRipple icon="pi pi-times" (click)="bookDemoDialog = false" label="Cancel" class="p-button-text"></button>
+            <button pButton pRipple icon="pi pi-check" (click)="bookDemoDialog = false" label="Save"></button>
+        </div>
+    </ng-template>
+</p-dialog>
